@@ -187,8 +187,16 @@
       const txt = sel.toString().trim();
       if (txt) {
         selectedText = txt;
-        const r = sel.getRangeAt(0).getBoundingClientRect();
-        showIcon(r.right + window.scrollX + 5, r.bottom + window.scrollY + 5);
+        const range = sel.getRangeAt(0);
+        let rect;
+        try {
+          const endRange = range.cloneRange();
+          endRange.collapse(false); // collapse to end
+          rect = endRange.getClientRects()[0] || endRange.getBoundingClientRect();
+        } catch (err) {
+          rect = range.getBoundingClientRect();
+        }
+        if (rect) showIcon(rect.right + window.scrollX + 5, rect.bottom + window.scrollY + 5);
       } else if (!popup?.contains(e.target)) hideIcon();
     });
   });
@@ -199,4 +207,4 @@
       closePopup();
     }
   });
-})(); 
+})();
