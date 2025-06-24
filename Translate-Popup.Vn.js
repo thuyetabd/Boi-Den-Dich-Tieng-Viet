@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bôi Đen + Dịch Tiếng Việt (Popup)
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      1.1
 // @description  Dịch nhanh đoạn văn bản được bôi đen sang Tiếng Việt ngay trên trang.
 // @author       Phan Đình Thuyết
 // @match        http://*/*
