@@ -141,7 +141,7 @@
     `;
     langBackdrop.appendChild(box);
     document.body.appendChild(langBackdrop);
-    const hide = () => langBackdrop.style.display = 'none';
+    const hide = () => { langBackdrop.style.display = 'none'; }
     box.querySelector('#qt-lang-close').onclick = hide;
     langBackdrop.onclick = e => { if (e.target === langBackdrop) hide(); };
     langButtons = box.querySelectorAll('button[data-code]');
