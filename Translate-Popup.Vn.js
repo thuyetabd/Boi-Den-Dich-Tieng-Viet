@@ -9,6 +9,7 @@
 // @grant        GM_addStyle
 // @grant        GM_xmlhttpRequest
 // @connect      translate.googleapis.com
+// @Github       https://raw.githubusercontent.com/thuyetabd/Boi-Den-Dich-Tieng-Viet/refs/heads/main/Translate-Popup.Vn.js
 // ==/UserScript==
 
 (() => {
